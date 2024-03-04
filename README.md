@@ -29,7 +29,7 @@ The results of the model predictions will be displayed, indicating the potential
 
 ## Contributors
 
-- [Avinash Warale](https://github.com/p4rz1v4l26)
+- [Avinash Warale Kalyan](https://github.com/p4rz1v4l26)
 - [Siddharth Pagaria](https://github.com/sidpagaria)
 - [Asima Siddiqua](https://github.com/asimasiddiqua)
 - [Spoorthi HG](https://github.com/spoorthihg25)
