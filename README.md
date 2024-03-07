@@ -34,6 +34,7 @@ The results of the model predictions will be displayed, indicating the potential
 - [Asima Siddiqua](https://github.com/asimasiddiqua)
 - [Spoorthi HG](https://github.com/spoorthihg25)
 - [Chaitra V](https://github.com/chaitra1323)
+- [Uday G](https://github.com/oxBinaryBrain)
   
 
 Feel free to contribute to this project by forking and submitting pull requests.
