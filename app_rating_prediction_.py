@@ -470,3 +470,41 @@ plt.title('Decision Tree Regression Model - Test Set Predictions vs. Actual Rati
 plt.show()
 
 
+
+### Random Forest  Classifier
+
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import r2_score
+import matplotlib.pyplot as plt
+
+# Data preprocessing (cleaning and feature selection)
+# For this example, let's use 'Reviews' as the feature and 'Rating' as the target variable.
+X = df1[['Reviews']]  # Feature
+y = df1['Rating']  # Target variable
+
+# Perform the train-test split with a 70-30 ratio
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Create a Random Forest Regression model
+model = RandomForestRegressor(n_estimators=100, random_state=42)  # Using 100 trees for demonstration
+
+# Fit the model on the training data
+model.fit(X_train, y_train)
+
+# Make predictions on the testing set
+y_test_pred = model.predict(X_test)
+
+# Calculate the R2 score on the testing set
+r2_test = r2_score(y_test, y_test_pred)
+print("R-squared (R2) on the testing set:", r2_test)
+
+# Visualize the model's predictions compared to the actual ratings on the testing set
+plt.figure(figsize=(10, 6))
+plt.scatter(y_test, y_test_pred, color='#ffdd00')
+plt.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], 'k--', lw=3)
+plt.xlabel('Actual Ratings')
+plt.ylabel('Predicted Ratings')
+plt.title('Random Forest Regression Model - Test Set Predictions vs. Actual Ratings')
+plt.show()
+
